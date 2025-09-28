@@ -1,0 +1,481 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff2a6;
+    padding-top: 180px; /* Espaço para evitar sobreposição do conteúdo inicial */
+      padding-top: 80px;
+}
+
+header {
+    position: fixed; /* Mantém o header fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar profundidade */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Permite que o menu ocupe o espaço restante */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; /* Letra forte (negrito) */
+    margin: 0 15px; /* Espaçamento entre os links */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav a:hover {
+    color: #FFD700; /* Cor de destaque ao passar o mouse */
+}
+
+/* Garantindo que as imagens da equipe tenham o mesmo estilo */
+.right-images img {
+    width: 40px;  /* Ajuste o tamanho das imagens conforme necessário */
+    margin-right: 10px; /* Espaço entre as imagens */
+    border-radius: 100%;  /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff2a6;  /* Cor de fundo AliceBlue */
+    padding: 8px;  /* Adiciona um pouco de preenchimento entre a imagem e a borda */
+    transition: transform 0.3s ease-in-out; /* Transição para efeito ao passar o mouse */
+        height: 40px;  /* Para manter a proporção da imagem */
+        margin-right: 10px; /* Espaço entre as imagens */
+    
+}
+
+/* Efeito de hover para aumentar o tamanho e destacar a caixa */
+.right-images img:hover {
+    transform: scale(1.05);  /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+/* Ajusta o estilo das imagens dentro da seção de Pokémon na Pokédex */
+.pokemon-card img {
+    width: 100%;  /* Imagens devem ocupar toda a largura do card */
+    height: auto;  /* Para manter a proporção da imagem */
+    border-radius: 8px;  /* Bordas arredondadas */
+}
+
+/* Garantir que as imagens do menu e os Pokémon dentro da equipe tenham a mesma estética */
+.team-member img {
+    width: 80px;  /* Ajuste o tamanho conforme necessário */
+    height: 80px;  /* Para manter a proporção */
+    border-radius: 8px;  /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: aliceblue;  /* Cor de fundo AliceBlue */
+    padding: 8px;  /* Adiciona um pequeno preenchimento */
+    transition: transform 0.3s ease-in-out; /* Transição para efeito de hover */
+}
+
+/* Efeito de hover para a imagem da equipe */
+.team-member img:hover {
+    transform: scale(1.05);  /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+
+
+
+.logo {
+    width: 180px; /* Reduzido para melhor adaptação */
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    align-items: center; /* Alinha os links verticalmente */
+    position: relative; /* Necessário para posicionar a Pokébola */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative; /* Para associar a Pokébola ao link */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da Pokébola */
+.pokeball-icon {
+    width: 24px; /* Tamanho da Pokébola */
+    height: 24px;
+    position: absolute;
+    top: -30px; /* Posiciona a Pokébola acima do link */
+    left: 50%; /* Centraliza horizontalmente no link */
+    transform: translateX(-50%); /* Ajusta a centralização */
+}
+
+#pokemonInput {
+    width: 100%; /* Ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima para a barra de pesquisa */
+    padding: 10px 15px; /* Espaçamento interno */
+    background-color: white; /* Fundo branco */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave em volta */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+#pokemonInput:focus {
+    outline: none; /* Remove o contorno ao focar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao focar */
+}
+/* Container */
+.container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 90%; /* Limita a largura máxima */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 100%; /* Ajusta o input para telas menores */
+    max-width: 500px; /* Limita a largura máxima */
+    box-sizing: border-box; /* Inclui o padding no tamanho total */
+}
+
+button {
+    background-color: #005b8f; 
+    color: white; /* Preto */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Animação suave */
+}
+
+#pokemonInfo {
+    margin-top: 20px;
+}
+
+/* Pokédex */
+.pokedex-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.pokemon-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.load-more {
+        background-color: #005b8f; /* Amarelo */
+        color: white; /* Preto */
+        padding: 15px 50px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 150px; /* Ajusta o tamanho do logo para telas menores */
+    }
+
+    .nav-links {
+        gap: 10px; /* Reduz o espaçamento entre os links */
+    }
+
+    input {
+        margin-right: 0; /* Remove margem lateral em telas menores */
+        width: calc(100% - 20px); /* Adapta o tamanho ao container */
+    }
+
+    button {
+        width: 100%; /* O botão ocupa toda a largura */
+        margin-top: 10px; /* Espaço extra entre o botão e o input */
+    }
+
+    .pokemon-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta tamanho dos cards */
+    }
+
+    .pokemon-card img {
+        width: 80px;
+        height: 80px; /* Reduz as imagens dos Pokémon */
+    }
+}
+
+
+.load-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Informações detalhadas do Pokémon */
+.pokemon-details {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.pokemon-details img {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.pokemon-details h2 {
+    color: #333;
+    margin: 0;
+}
+
+.pokemon-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.pokemon-details strong {
+    color: #007BFF;
+}
+
+/* Limpeza de float */
+.pokemon-details::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Empilha o conteúdo do header */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Links dispostos verticalmente */
+        gap: 5px;
+    }
+
+    .logo {
+        width: 120px; /* Reduz ainda mais o tamanho do logo */
+    }
+
+    input {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .pokemon-details {
+        padding: 15px; /* Ajusta o padding para telas menores */
+    }
+
+    .pokemon-details p {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Estilo para exibir os Pokémon da equipe */
+.team-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas fixas */
+    gap: 20px;
+    justify-items: center; /* Centraliza os itens */
+    padding: 20px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 200px;
+    position: relative; /* Para o botão de remoção */
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+}
+
+.team-member button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Posiciona o botão no canto inferior */
+    bottom: 10px;
+}
+
+.team-member button:hover {
+    background-color: darkred;
+}
+
+.evop {
+    text-align: center;
+}
+
+.evolution-tree {
+    text-align: center;
+}
+
+.duelo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pokemon-comparador {
+    display: flex;
+    justify-content: center; /* Alinha as caixas de Pokémon e o VS no centro */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 30px; /* Espaçamento entre as caixas e o "VS" */
+}
+
+.pokemon-box {
+    width: 200px;
+    height: 300px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Coloca a imagem e o conteúdo na coluna */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: aliceblue; /* Fundo suave para a caixa */
+}
+
+.pokemon-box img {
+    width: 150px; /* Tamanho da imagem do Pokémon */
+    height: 150px;
+    margin-bottom: 10px; /* Espaço entre a imagem e qualquer conteúdo abaixo */
+}
+
+.vs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Ajuste o tamanho do "VS" */
+    height: 80px; /* Ajuste do "VS" */
+   
+}
+
+.vs img {
+    width: 120px;  /* Ajuste o tamanho da imagem do "VS" */
+    height: 120px; /* Ajuste o tamanho da imagem do "VS" */
+    object-fit: contain; /* Garante que a imagem seja redimensionada corretamente */
+}
+.duelo-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.comparison-box {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #fff9c4; /* Cor de fundo amarela bem clara */
+    box-shadow: 0px 4px 6px rgba(255, 255, 0, 0.4); /* Sombra amarela clara */
+}
+
+.comparison-box p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.text-ab {
+
+    height: 10px;
+    width: 10px;        
+
+}
+
+.foto-equipe {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    height: 100%; /* Garante que ocupe toda a altura disponível */
+}
+
+.foto-equipe img {
+    width: 350px;  
+    height: 350px; 
+    object-fit: contain; 
+}
+
+
+.botao-c {
+
+    margin-bottom: 25px;
+
+}
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex e Comparador</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/imagens/pokemon-logo.png" alt="Logo Pokémon" class="logo">
+        <nav class="nav-links">
+            <a href="/Paginas/home.html">POKÉDEX</a>
+            <a href="/Paginas/enciclopedia.html">ENCICLOPÉDIA
+                <img src="/imagens/pokebolaaa.png" alt="Pokébola" class="pokeball-icon">
+            </a>
+            <a href="/Paginas/evolucoes.html">EVOLUÇÕES</a>
+            <a href="/Paginas/comparador.html">COMPARADOR
+                
+            </a>
+            <a href="equipe.html">EQUIPE</a>
+        </nav>
+        <div class="right-images">
+            <img src="image1.png" alt="Imagem 1">
+            <img src="image2.png" alt="Imagem 2">
+            <img src="image3.png" alt="Imagem 3">
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="text-comparar">
+                <img src="/imagens/Buscar-Pok-mon-29-11-2024.png" alt="VS">
+            </div>
+            <input type="text" id="pokemonInput" placeholder="Digite o Nome ou o ID do Pokémon">
+            <button onclick="fetchPokemonn()">Buscar</button>    
+
+            <div class="pokemon-details">
+                <h2 id="pokemon-name"></h2>
+                <img id="pokemon-image">
+                <p id="pokemon-info"></p>
+            </div>
+        </div>
+
+        <div class="pokedex-container">
+            <div id="pokemonList" class="pokemon-list"></div>
+            <button id="loadMore" class="load-more">Carregar Mais</button>
+        </div>
+
+    </section>
+
+    <script src="/Js/enciclopedia.js"></script>
+</body>
+</html>
+

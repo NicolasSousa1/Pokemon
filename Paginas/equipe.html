@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex e Comparador</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/imagens/pokemon-logo.png" alt="Logo Pokémon" class="logo">
+        <nav class="nav-links">
+            <a href="/Paginas/home.html">POKÉDEX</a>
+            <a href="/Paginas/enciclopedia.html">ENCICLOPÉDIA
+                
+            </a>
+            <a href="/Paginas/evolucoes.html">EVOLUÇÕES</a>
+            <a href="/Paginas/comparador.html">COMPARADOR
+                
+            </a>
+            <a href="equipe.html">EQUIPE
+                <img src="/imagens/pokebolaaa.png" alt="Pokébola" class="pokeball-icon">
+            </a>
+        </nav>
+        <div class="right-images">
+            <img src="image1.png" alt="Imagem 1">
+            <img src="image2.png" alt="Imagem 2">
+            <img src="image3.png" alt="Imagem 3">
+        </div>
+    </header>
+    
+
+    <section>
+
+        
+        <!-- Exibição da equipe -->
+        <div id="team" class="team-container">
+
+            <div class="foto-equipe">
+                <img src="/imagens/ab.png" alt="VS">
+            </div>
+            
+            <div id="teamMembers" class="team-members">
+                <!-- Aqui serão inseridos os Pokémon da equipe -->
+            </div>
+        </div>
+    
+        <!-- Barra de busca -->
+        <div class="container">
+            <h1>Buscar Pokémon</h1>
+            <input type="text" id="pokemonInput" placeholder="Digite o Nome do Pokémon ou o ID">
+            <button onclick="fetchPokemon()">Adicionar à Equipe</button>
+            <div id="pokemonInfo"></div>
+        </div>
+    
+        <!-- Pokédex -->
+        <div class="pokedex-container">
+            <div id="pokemonList" class="pokemon-list"></div>
+            <button id="loadMore" class="load-more">Carregar Mais</button>
+        </div>
+    </section>
+    
+
+    <script src="/Js/equipe.js"></script>
+</body>
+</html>

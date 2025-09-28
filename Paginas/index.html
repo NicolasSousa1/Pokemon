@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #007BFF; /* Azul */
+      font-family: Arial, sans-serif;
+      opacity: 1; /* Inicialmente visível */
+      transition: opacity 0.5s ease-in-out; /* Transição suave */
+    }
+    body.hidden {
+      opacity: 0; /* Faz desaparecer gradualmente */
+    }
+    .container {
+      display: flex;
+      flex-direction: column; /* Alinha itens verticalmente */
+      align-items: center; /* Centraliza os itens horizontalmente */
+    }
+    .image {
+      width: 800px;
+      height: 300px;
+      object-fit: contain; /* Ajusta a imagem sem distorcer */
+      margin-bottom: 20px; /* Espaço entre imagem e botão */
+    }
+    .button {
+      background-color: #FFD700; /* Amarelo */
+      color: #000; /* Preto */
+      padding: 15px 50px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+      transition: box-shadow 0.3s ease; /* Animação suave */
+    }
+    .button:hover {
+      background-color: #FFC107; /* Tom mais escuro no hover */
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    }
+    .corner-image {
+      position: absolute; /* Permite posicionamento específico */
+      bottom: 0; /* Encosta na parte inferior */
+      right: 0; /* Encosta na parte direita */
+      width: 150px; /* Largura pequena */
+      height: 250px; /* Altura pequena */
+      object-fit: contain; /* Ajusta a imagem sem distorcer */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Imagem central -->
+    <img src="/imagens/pokemon-logo.png" alt="Logo" class="image" />
+    <button class="button" onclick="navigate()">Entrar</button>
+  </div>
+
+  <!-- Imagem no canto inferior direito -->
+  <img src="/imagens/mew.png" alt="Bottom Right Image" class="corner-image" />
+
+ 
+
+  <script>
+    function navigate() {
+      // Adiciona a classe 'hidden' para ativar a transição de opacidade
+      document.body.classList.add('hidden');
+
+      // Espera a duração da transição (500ms) antes de redirecionar
+      setTimeout(() => {
+        window.location.href = 'home.html'; // Substitua pelo caminho da próxima página
+      }, 500); // O tempo deve coincidir com a duração da transição
+    }
+  </script>
+</body>
+</html>

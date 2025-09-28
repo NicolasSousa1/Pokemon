@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex e Comparador</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/imagens/pokemon-logo.png" alt="Logo Pokémon" class="logo">
+        <nav class="nav-links">
+            <a href="/Paginas/home.html">POKÉDEX</a>
+            <a href="/Paginas/enciclopedia.html">ENCICLOPÉDIA</a>
+            <a href="/Paginas/evolucoes.html">EVOLUÇÕES</a>
+            <a href="/Paginas/comparador.html">COMPARADOR
+                <img src="/imagens/pokebolaaa.png" alt="Pokébola" class="pokeball-icon">
+            </a>
+            <a href="equipe.html">EQUIPE</a>
+        </nav>
+        <div class="right-images">
+            <img src="image1.png" alt="Imagem 1">
+            <img src="image2.png" alt="Imagem 2">
+            <img src="image3.png" alt="Imagem 3">
+        </div>
+    </header>
+
+    <section id="duelo" class="duelo-container">
+        <div class="text-comparar">
+            <img src="/imagens/Comparador-De-Pok-mon-29-11-2024.png" alt="VS">
+        </div>
+
+        <section id="busca">
+            <div class="botao-c">
+                <input type="text" id="pokemonInput" placeholder="Digite o nome ou ID do Pokémon...">
+                <button id="searchButton">Buscar Pokémon</button>
+            </div>
+        </section>
+
+        <div class="pokemon-comparador">
+            <div id="pokemon1" class="pokemon-box"></div>
+            <div class="vs">
+                <img src="/imagens/vs.png" alt="VS">
+            </div>
+            <div id="pokemon2" class="pokemon-box"></div>
+        </div>
+
+        <div class="duelo-buttons">
+            <button onclick="sortearPokemons()">Sortear</button>
+            <button onclick="compararPokemons()">Comparar</button>
+        </div>
+
+        <!-- Caixa para exibir o resultado da comparação -->
+        <!-- Caixa para exibir o resultado da comparação -->
+<div class="comparison-results">
+    <div id="comparisonResult" class="comparison-box" style="display: none;">
+        <div class="comparison-content">
+            <div id="comparisonText" class="comparison-cards"></div>
+        </div>
+    </div>
+</div>
+
+
+        <section id="pokedex" class="pokedex-container">
+            <div id="pokemonList" class="pokemon-list"></div>
+            <button id="loadMore" class="load-more">Carregar Mais</button>
+        </section>
+
+    </section>
+
+    <script src="/Js/comparador.js"></script>
+</body>
+</html>
+

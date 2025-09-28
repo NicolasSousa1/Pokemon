@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex e Comparador</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/imagens/pokemon-logo.png" alt="Logo Pokémon" class="logo">
+        <nav class="nav-links">
+            <a href="/Paginas/home.html">POKÉDEX</a>
+            <a href="/Paginas/enciclopedia.html">ENCICLOPÉDIA
+                
+            </a>
+            <a href="/Paginas/evolucoes.html">EVOLUÇÕES
+                <img src="/imagens/pokebolaaa.png" alt="Pokébola" class="pokeball-icon">
+            </a>
+            <a href="/Paginas/comparador.html">COMPARADOR
+                
+            </a>
+            <a href="equipe.html">EQUIPE
+                
+            </a>
+        </nav>
+        <div class="right-images">
+            <img src="image1.png" alt="Imagem 1">
+            <img src="image2.png" alt="Imagem 2">
+            <img src="image3.png" alt="Imagem 3">
+        </div>
+    </header>
+
+    <section>
+        
+
+
+        <div class="evop">
+       
+        <div class="text-comparar">
+            <img src="/imagens/Arvore-De-Evolu-es-29-11-2024.png" alt="VS">
+        </div>
+        <input type="text" id="evolutionInput" placeholder="Digite o nome ou ID do Pokémon">
+        <button id="searchButton">Buscar</button>
+    
+        </div>
+
+
+        <div id="evolutionTree" class="evolution-tree">
+            <!-- A árvore de evolução será renderizada aqui -->
+        </div>
+
+
+
+        <div class="pokedex-container">
+            <div id="pokemonList" class="pokemon-list"></div>
+            <button id="loadMore" class="load-more">Carregar Mais</button>
+        </div>
+    
+    
+
+
+        <script type="module" src="/Js/evolucoes.js"></script>
+
+
+
+
+
+
+
+    </section>
+
+    
+</body>
+</html>
+
+
+
